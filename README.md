@@ -27,7 +27,7 @@ The URL for the character service can be configured ```fetchDelay``` property.
 
 ### Run the required character service
 This application depends on another microservice to serve large streams of character data.  
-The following command will run one such a container.  Make sure the port matches the host port from the ```characterService``` property
+The following command will run one such a container.  Make sure the host port matches the port from the ```characterService``` property
 ```bash
 docker run -p 8080:80 21re/coding-challenge
 ```
