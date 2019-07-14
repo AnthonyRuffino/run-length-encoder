@@ -1,12 +1,18 @@
-# Employees
+# Run-Length Encoder
 
-This project uses an in memory database for easy querying of the cached character data.  
+This application fetches large amounts of repetitive data containing characters separated by newlines from an external service. It then caches that data using a [Run-length Encoding](https://en.wikipedia.org/wiki/Run-length_encoding) algorithm.  
 
-This application is dependant on another microservice serving the character data.  
+It then makes the data available by index via the following url:  
+
+```http://localhost:1337/{index}```
+
 
 
 ## Tech Stack
-This application uses Spring Boot
+This application uses Spring Boot and an in-memory H2 database for easy querying of the cached data.  
+
+This application is dependant on another micro-service serving the character data.  
+
 
 ### Clone the repo
 
@@ -34,7 +40,7 @@ docker run -p 8080:80 21re/coding-challenge
 ```
 
 ### Testing
-Open your browser to [http://localhost:8081/](http://localhost:8081/)
+Open your browser to [http://localhost:1337/{index}](http://localhost:1337/1)
 
 ### Run with Docker
 You can build and then run this application with Docker, but you will need to run it on the same [network](https://docs.docker.com/network/) as the character service.  
