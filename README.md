@@ -23,7 +23,7 @@ git clone https://github.com/AnthonyRuffino/run-length-encoder.git
 ### Properties
 The URL for the character service can be configured via the ```characterService``` property in the [property file](src/main/resources/application.properties)  
 
-The URL for the character service can be configured ```fetchDelay``` property.
+The rate between requests for more data are mode to the to the character service can be configured via the ```fetchDelay``` property.
 
 ### Run the required character service
 This application depends on another microservice to serve large streams of character data.  
